@@ -24,10 +24,20 @@ class Person extends EventEmitter{
     }
 }
 
+//create sanuri as an object of person class
 let sanuri=new Person('sanuri');
+let yasara =new Person('yasara');
+
+yasara.on('name',()=>{
+    console.log('My name is '+yasara.name);
+});
+//funtion listner
 sanuri.on('name',()=>{
     console.log('My name is '+sanuri.name);
 });
 
 //exicute the emitter class
 sanuri.emit('name');
+yasara.emit('name');
+
+
